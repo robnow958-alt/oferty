@@ -75,20 +75,38 @@ dochodzeniem roszczeń podstawą przetwarzania może być również art. 6
 ust. 1 lit. c lub f RODO.
 </p>
 
-<h2>4. Formularz Formspree</h2>
+<h2>4. Podmioty przetwarzające dane w związku z formularzem</h2>
 
 <p>
-Formularz na stronie jest obsługiwany przez zewnętrznego dostawcę usługi
-— Formspree, Inc. Dane wpisane w formularzu są przekazywane i
-tymczasowo przetwarzane na serwerach tego dostawcy w celu dostarczenia
-zgłoszenia do administratora.
+Formularz na stronie jest obsługiwany za pomocą infrastruktury
+Cloudflare, Inc. (Cloudflare Workers), która odbiera zgłoszenie
+przesłane przez formularz i przekazuje je dalej w celu dostarczenia
+wiadomości do administratora.
 </p>
 
 <p>
-Formspree może przetwarzać dane na serwerach znajdujących się poza
-Europejskim Obszarem Gospodarczym. Szczegółowe informacje dotyczące
-zasad przetwarzania danych oraz zabezpieczeń transferu znajdują się
-w aktualnej polityce prywatności Formspree.
+Do wysyłki wiadomości e-mail z treścią zgłoszenia wykorzystywana jest
+usługa Resend, Inc. Dane wpisane w formularzu (imię i nazwisko lub
+nazwa firmy, adres e-mail, wybrany wariant usługi oraz treść zgłoszenia)
+są przekazywane do Resend wyłącznie w celu wysłania wiadomości e-mail
+do administratora.
+</p>
+
+<p>
+Odpowiedź na zgłoszenie trafia na skrzynkę pocztową administratora
+za pośrednictwem usługi Cloudflare Email Routing, która przekierowuje
+wiadomości na prywatny adres e-mail administratora w usłudze Gmail
+(Google LLC).
+</p>
+
+<p>
+Cloudflare, Inc., Resend, Inc. oraz Google LLC mogą przetwarzać dane
+na serwerach znajdujących się poza Europejskim Obszarem Gospodarczym
+(w szczególności w USA). Transfer danych do tych podmiotów odbywa się
+na podstawie mechanizmów przewidzianych w RODO, w tym standardowych
+klauzul umownych lub innych odpowiednich zabezpieczeń stosowanych przez
+te podmioty. Szczegółowe informacje znajdują się w aktualnych
+politykach prywatności tych dostawców.
 </p>
 
 <h2>5. Odbiorcy danych</h2>
@@ -99,8 +117,9 @@ Dane mogą być przekazywane:
 
 <ul>
     <li>administratorowi strony internetowej;</li>
-    <li>dostawcy formularza Formspree, Inc.;</li>
-    <li>dostawcom usług poczty elektronicznej;</li>
+    <li>dostawcy infrastruktury Cloudflare, Inc. (Cloudflare Workers, Cloudflare Email Routing);</li>
+    <li>dostawcy usługi wysyłki e-mail Resend, Inc.;</li>
+    <li>dostawcy skrzynki pocztowej Google LLC (Gmail);</li>
     <li>dostawcom usług płatniczych, jeżeli płatność odbywa się za pośrednictwem zewnętrznego operatora;</li>
     <li>podmiotom uprawnionym na podstawie przepisów prawa.</li>
 </ul>
